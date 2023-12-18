@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Demo - Horizontal Scrolling</title>
+
+	<meta name="description" content="Horizontal Scrolling with jQuery">
+	<meta name="viewport" content="width=device-width">
+	
+	<link rel="icon" href="/favicon.ico">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="script/jquery.mousewheel.min.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$('html, body, *').mousewheel(function(e, delta) {
+				// multiplying by 40 is the sensitivity, 
+				// increase to scroll faster.
+				this.scrollLeft -= (delta * 40);
+				e.preventDefault();
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<section class="main">
+		<header>
+			<div class="container">
+				<div class="header">
+					<a href="" class="header__logo">
+						<img src="img\icon_icon_257508.svg" alt="Logo">
+					</a>
+					<nav class="header__nav">
+						<a href="#" class="header__link">На базу</a>
+						<a href="#" class="header__link">О нас</a>
+						<a href="#" class="header__link">Услуги</a>
+					</nav>
+					<button class="header__button" type="button">Связаться с нами</button>
+				</div>
+			</div>
+		</header>
+		<div class="main__about">
+			<div class="container">
+				<p class="about__title">"Звёздные Грузоперевозки"</p>
+				<p class="about__text">Это инновационная космическая компания, специализирующаяся на перевозке грузов в космическое пространство. Наша миссия - расширить горизонты человечества, предоставив надежные и эффективные услуги по доставке грузов в самые отдаленные уголки нашей галактики и даже за ее пределы.</p>
+				<p class="about__text">"Звёздные Грузоперевозки" - это не просто компания, она - мост в будущее человечества, сокращая расстояния во Вселенной и делая космические приключения доступными для всех. Мы гордимся тем, что способствуем освоению космоса и созданию устойчивой будущей для наших потомков.</p>			
+			</div>
+		</div>
+		<div class="main__service">
+			<div class="container">
+				<div class="border__service">
+					<p class="about__text">Наши ключевые преимущества: полоса разделения</p>
+				</div>
+				<div class="service">
+					<div class="service__col">
+						<h2 class="service__title"><img src="img\dollar_square_icon_257360.svg" alt="services">Технологический авангард</h2>
+						<p class="service__text">Мы внедряем самые передовые технологии и инновации для обеспечения безопасности и надежности перевозок в космосе. Наши космические корабли и ракеты соответствуют самым строгим стандартам.</p>
+					</div>
+					<div class="service__col">
+						<h2 class="service__title"><img src="img\cpu_setting_icon_257310.svg" alt="services">Гибкие решения</h2>
+						<p class="service__text">Мы предлагаем широкий спектр услуг - от маленьких космических палет до крупных модулей и станций. Независимо от размера груза, мы найдем оптимальное решение для наших клиентов.</p>
+					</div>
+					<!--
+					<div class="service__col">
+						<img src="img\arrow_circle_down_icon_257110.svg" alt="services">
+						<h2 class="service__title">Экологически чистые транспортные средства</h2>
+						<p class="service__text">Мы активно работаем над разработкой экологически устойчивых методов перевозки и используем новейшие технологии, чтобы минимизировать воздействие на окружающую среду.</p>
+					</div>
+					-->
+					<div class="service__col">
+						<h2 class="service__title"><img src="img\arrow_circle_down_icon_257110.svg" alt="services">Глобальная партнерская сеть</h2>
+						<p class="service__text">Мы сотрудничаем с космическими агентствами и частными компаниями по всему миру, что позволяет нам предоставлять услуги грузоперевозок в любой точке космоса.</p>
+					</div>
+					<div class="service__col">
+						<h2 class="service__title"><img src="img\arrow_circle_down_icon_257110.svg" alt="services">Профессиональная команда</h2>
+						<p class="service__text">Наша команда включает в себя выдающихся инженеров, астронавтов и логистов, обеспечивая высокий уровень надежности и безопасности во всех аспектах наших операций.</p>
+					</div>
+				</div>
+				<a href="#" class="main__link">Заказать услугу</a>
+			</div>
+		</div>
+	</section>
+
+<!--
+	<div id="container">
+
+		<div class="section blue"></div>
+		<div class="section green"></div>
+		<div class="section red"></div>
+		<div class="section yellow"></div>
+
+		<div class="section blue"></div>
+		<div class="section green"></div>
+		<div class="section red"></div>
+		<div class="section yellow"></div>
+
+		<div class="section blue"></div>
+		<div class="section green"></div>
+		<div class="section red"></div>
+		<div class="section yellow"></div>
+
+		<div class="clear"></div>
+
+	</div>
+-->
+<!--
+	<div id="container">
+
+		<div class="flex blue">1</div>
+		<div class="flex green">2</div>
+		<div class="flex red">3</div>
+		<div class="flex yellow">4</div>
+
+	</div>
+-->	
+</body>
+</html>

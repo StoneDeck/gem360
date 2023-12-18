@@ -1,75 +1,124 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="ru">
 <head>
-<title>Project Title</title>
-<meta charset="utf-8">
-<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-<style> @-ms-viewport { width: device-width; } </style>
-<link rel="stylesheet" href="vendor/reset.min.css">
-<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<title>Звёздные Грузоперевозки</title>
+
+	<meta name="description" content="Horizontal Scrolling with jQuery">
+	<meta name="viewport" content="width=device-width">
+	
+	<link rel="icon" href="/favicon.ico">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="script/jquery.mousewheel.min.js"></script>
+	<script src="script/scrollimg.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$('html, body, *').mousewheel(function(e, delta) {
+				this.scrollLeft -= (delta * 100);
+				/*
+				e.preventDefault();
+				*/
+			});
+
+		});
+	</script>
 </head>
-<body class="multiple-scenes ">
+<body>
+	<section class="main">
+		<header class="header__container">
+				<div class="header">
+					<a href="" class="header__logo">
+						<img src="img/icon_icon_257508.svg" alt="Logo">
+					</a>
+					<nav class="header__nav">
+						<ul>
+							<li><a href="#" class="header__link">О нас</a></li>
+							<li><a href="#get-service" class="header__link">Услуги</a></li>
+							<li><a href="app-files/index.html" class="header__link">Склад</a></li>
+							<!-- <li><a class="header__link" id="servicescroll" onclick="gotoelement(this.getAttribute('id'))">Услуги</a></li> -->
+							<li><a href="news.html" class="header__link">Новости</a>	</li>						
+						</ul>
+					</nav>
+					<!-- <button class="header__button" type="button">Связаться с нами</button> -->
+				</div>
+		</header>
+		<div class="main__about">
+			<div class="about">
+				<div class="text">
+					<p class="about__title">"Звёздные Грузоперевозки"</p>
+					<p class="about__text">Это инновационная космическая компания, специализирующаяся на перевозке грузов в космическое пространство. Наша миссия - расширить горизонты человечества, предоставив надежные и эффективные услуги по доставке грузов в самые отдаленные уголки нашей галактики и даже за ее пределы.</p>
+					<p class="about__text">"Звёздные Грузоперевозки" - это не просто компания, она - мост в будущее человечества, сокращая расстояния во Вселенной и делая космические приключения доступными для всех. Мы гордимся тем, что способствуем освоению космоса и созданию устойчивой будущей для наших потомков.</p>			
+				</div>
 
-<div id="pano"></div>
+			</div>
+			<div class="container">
+				<div class="content">
+					<div id="c1" class="about__anim">
+						<img id="i1" class="header__img" src="img/ship1.png" alt="ship">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main__service">
+				<div class="services" id="papa">
+					<div id="service" class="border__service">
+						<p class="service__text__border rotate">Наши ключевые преимущества</p>
+					</div>
+					<div class="service">
+						<div class="service__col">
+							<h2 class="service__title"><img src="img/dollar_square_icon_257360.svg" alt="services">Технологический авангард</h2>
+							<p class="service__text">Мы внедряем самые передовые технологии и инновации для обеспечения безопасности и надежности перевозок в космосе. Наши космические корабли и ракеты соответствуют самым строгим стандартам.</p>
+						</div>
+						<div class="service__col">
+							<h2 class="service__title"><img src="img/cpu_setting_icon_257310.svg" alt="services">Гибкие решения</h2>
+							<p class="service__text">Мы предлагаем широкий спектр услуг - от маленьких космических палет до крупных модулей и станций. Независимо от размера груза, мы найдем оптимальное решение для наших клиентов.</p>
+						</div>
+						<!--
+						<div class="service__col">
+							<img src="img\arrow_circle_down_icon_257110.svg" alt="services">
+							<h2 class="service__title">Экологически чистые транспортные средства</h2>
+							<p class="service__text">Мы активно работаем над разработкой экологически устойчивых методов перевозки и используем новейшие технологии, чтобы минимизировать воздействие на окружающую среду.</p>
+						</div>
+						-->
+						<div class="service__col">
+							<h2 class="service__title"><img src="img/arrow_circle_down_icon_257110.svg" alt="services">Глобальная партнерская сеть</h2>
+							<p class="service__text">Мы сотрудничаем с космическими агентствами и частными компаниями по всему миру, что позволяет нам предоставлять услуги грузоперевозок в любой точке космоса.</p>
+						</div>
+						<div class="service__col">
+							<h2 class="service__title"><img src="img/arrow_circle_down_icon_257110.svg" alt="services">Профессиональная команда</h2>
+							<p class="service__text">Наша команда включает в себя выдающихся инженеров, астронавтов и логистов, обеспечивая высокий уровень надежности и безопасности во всех аспектах наших операций.</p>
+						</div>
+					</div>
+					<div id="get-service" class="main__link__back">
+						<button class="trigger">ЗАКАЗАТЬ УСЛУГУ</button>
+						<div class="modal">
+							<div class="modal-content">
+								<span class="close-button">×</span>
+								<h1>Отличное решение!<br>Укажите данные и мы с вами свяжемся</h1>
+								<form id="form">
+									<input type="text" name="name" class="name form-control" placeholder="Имя"/>
+									<input type="text" name="mobile" class="mobile form-control" placeholder="Телефон"/>
+									<input type="text" name="crgtype" class="name form-control" placeholder="Укажите ваш груз (примерно)"/>
+									<input class="btn send" type="submit" value="Отправить" />
+								</form>
+							</div>
+						</div>						
+					</div>
 
-<div id="sceneList">
-  <ul class="scenes">
-    
-      <a href="javascript:void(0)" class="scene" data-id="0-20230928_142352_211">
-        <li class="text">20230928_142352_211</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="1-20230928_142435_211">
-        <li class="text">20230928_142435_211</li>
-      </a>
-    
-  </ul>
-</div>
-
-<div id="titleBar">
-  <h1 class="sceneName"></h1>
-</div>
-
-<a href="javascript:void(0)" id="autorotateToggle">
-  <img class="icon off" src="img/play.png">
-  <img class="icon on" src="img/pause.png">
-</a>
-
-<a href="javascript:void(0)" id="fullscreenToggle">
-  <img class="icon off" src="img/fullscreen.png">
-  <img class="icon on" src="img/windowed.png">
-</a>
-
-<a href="javascript:void(0)" id="sceneListToggle">
-  <img class="icon off" src="img/expand.png">
-  <img class="icon on" src="img/collapse.png">
-</a>
-
-<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
-  <img class="icon" src="img/up.png">
-</a>
-<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
-  <img class="icon" src="img/down.png">
-</a>
-<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
-  <img class="icon" src="img/left.png">
-</a>
-<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
-  <img class="icon" src="img/right.png">
-</a>
-<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
-  <img class="icon" src="img/plus.png">
-</a>
-<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
-  <img class="icon" src="img/minus.png">
-</a>
-
-<script src="vendor/screenfull.min.js" ></script>
-<script src="vendor/bowser.min.js" ></script>
-<script src="vendor/marzipano.js" ></script>
-
-<script src="data.js"></script>
-<script src="index.js"></script>
-
+				</div>
+		</div>
+		<div id="c2" class="service__img">
+			<img id="i2" class="ship__top" src="img/ship2top.png" alt="ship">
+			<img class="ship__bottom" src="img/ship2bottom.png" alt="ship">			
+		</div>
+		<footer class="footer__container">
+			<p class="copyright">©️ Copyright 2301 | Гербер Даниил</p>
+		</footer>
+	</section>
 </body>
+<script src="script/modal.js"></script>
 </html>

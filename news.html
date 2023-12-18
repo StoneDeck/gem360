@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет постов</title>
+    <link rel="stylesheet" href="css/style-news.css">
+    <script type="module" src="script/import.js" defer></script>
+    <script src="script\hiding.js" defer></script>
+    <script src="script\pagination.js" defer></script>
+</head>
+<body>
+    <section class="main" id="post">
+        <div class="container">
+            <a href="index.html" class="back__link">На главную</a>
+        </div>
+        <div class="container__template">
+            <div class="posts">
+                <ul class="post">
+                    <li class="posts__id">Номер поста</li>
+                    <li class="posts__title">Заголовок</li>
+                    <li class="posts__body">Пример текста</li>
+                </ul>
+            </div>
+            <p class="comments__border">КОМЕНТАРИИ
+                <button class="btn">Показать</button>
+            </p>
+            <div class="comments">
+                <ul class="comment">
+                    <li class="comments__id"></li>
+                    <li class="comments__name">Имя</li>
+                    <li class="comments__email">em@il</li>
+                    <li class="comments__body">Пример текста</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
